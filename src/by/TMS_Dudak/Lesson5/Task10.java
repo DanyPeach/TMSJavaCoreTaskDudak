@@ -11,27 +11,41 @@ public class Task10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        System.out.print("Введите число: ");
-        int a = scanner.nextInt();
+        int a = 0;
+        while (true) {
+            System.out.print("Введите число: ");
+            a = scanner.nextInt();
 
-        if(a<3){
-            System.out.println("Неверное числовое значение");
-            System.exit(0);
-        }
-
-        int[] b = new int[a];
-        ArrayList c = new ArrayList();
-
-        for(int i = 0; i< b.length; i++){
-            b[i]= random.nextInt(0, a);
-
-            if(b[i]%2==0) {
-                c.add(b[i]);
+            if (a < 3) {
+                System.out.println("Неверное числовое значение");
+            } else {
+                break;
             }
         }
+
+        int count = 0;
+        int[] b = new int[a];
+
+        for (int i = 0; i < b.length; i++) {
+            b[i] = random.nextInt(0, a);
+
+            if (b[i] % 2 == 0) {
+                count++;
+            }
+        }
+
+        int[] c = new int[count];
+        for(int i = 0, j = 0; i< b.length; i++){
+            if (b[i] % 2 == 0) {
+                c[j]=b[i];
+                j++;
+            }
+        }
+
         System.out.print(Arrays.toString(b));
         System.out.print("\n");
-        System.out.print(Arrays.toString(c.toArray()));
+        System.out.print(Arrays.toString(c));
+
 
     }
 }

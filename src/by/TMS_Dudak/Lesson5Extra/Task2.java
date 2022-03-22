@@ -1,4 +1,4 @@
-package by.TMS_Dudak.Lesson6;
+package by.TMS_Dudak.Lesson5Extra;
 
 import java.util.Random;
 
@@ -7,7 +7,7 @@ public class Task2 {
         Random random = new Random();
         int[] a = new int[10];
         int sum = 0;
-        int finaleValue = 0;
+        double finaleValue = 0;
         int c = 0;
 
         for (int i = 0; i< a.length; i++){
@@ -18,7 +18,7 @@ public class Task2 {
             }
             System.out.print(a[i] + " ");
         }
-        finaleValue=sum/c;
+        finaleValue=(double) sum/c;
         System.out.println("\n Среднее арифметическое элементов с четными индексами "+finaleValue);
     }
 }

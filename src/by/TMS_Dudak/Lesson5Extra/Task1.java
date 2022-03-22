@@ -1,4 +1,4 @@
-package by.TMS_Dudak.Lesson6;
+package by.TMS_Dudak.Lesson5Extra;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -4,39 +4,40 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Task5 {
     public static void main(String[] args) {
-        //«Сожмите» массив, выбросив из него каждый второй элемент
-
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите длинну массива: ");
-        int a = scanner.nextInt();
-        int[] array = new int[a];
+        Random random = new Random();
+        int a = 0;
+        while (true) {
+            System.out.print("Введите число: ");
+            a = scanner.nextInt();
 
-        int count = 0;
-
-        for(int i = 0; i<array.length; i++){
-            array[i]=random.nextInt(0,98);
-            System.out.print(array[i]+ " ");
-            if(i%2==0){
-                array[i]=0;
-                count++;
+            if (a < 3) {
+                System.out.println("Неверное числовое значение");
+            } else {
+                break;
             }
         }
 
+        int[] b = new int[a];
+
+        for (int i = 0; i < b.length; i++) {
+            b[i] = random.nextInt(0, 99);
+        }
+
+        int[] c = new int[a];
+        for(int i = 0, j = 0; i< b.length; i++){
+            if (i % 2 == 0) {
+                c[j*2]=b[i];
+                j++;
+            }
+        }
+
+        System.out.print(Arrays.toString(b));
         System.out.print("\n");
-
-        int[] newArr = new int[count];
-        for(int i=0, j=1; i<array.length; i++){
-            System.out.print(newArr[j] + " 0 ");
-            if(i%2==0){
-                newArr[j]=array[i];
-            }
-
-        }
-
-
+        System.out.print(Arrays.toString(c));
 
     }
 }

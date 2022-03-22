@@ -14,7 +14,6 @@ public class Task4 {
 
         System.out.print("\n");
         for(int i=0; i<20; i++){
-            a[i]=random.nextInt(0, 20);
             if(i%2!=0){
             a[i]=0;}
             System.out.print(a[i] + " ");}

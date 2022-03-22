@@ -17,7 +17,7 @@ public class Task8 {
             if(b[i]==0){
                 b[i]=1;
             }
-            c[i]=a[i]/b[i];
+            c[i]=(double) a[i]/b[i];
         }
 
         System.out.print(Arrays.toString(a));
@@ -25,7 +25,6 @@ public class Task8 {
         System.out.print(Arrays.toString(b));
         System.out.print("\n");
         System.out.print(Arrays.toString(c));
-
 
     }
 }

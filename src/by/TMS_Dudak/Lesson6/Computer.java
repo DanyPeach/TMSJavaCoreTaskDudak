@@ -33,7 +33,7 @@ public class Computer {
                     System.out.println("Компьютер включен!");
                     amountOfTurningOn++;
 
-                    System.out.println("Хотите выключить компьютер? (yes/no)");
+                System.out.println("Хотите выключить компьютер? (yes/no)");
                 String valueQuestion = scanner.next();
                 String yes = "yes";
                 String no = "no";
@@ -53,12 +53,10 @@ public class Computer {
                 }else{
                     System.out.println("Неверное значение для ответа");
                 }
-            } else{
+            }else{
                     System.out.println("Включение привело ко взрыву компьютера");
                 }
-        }
-
-        if(amountOfTurningOn == 2){
+        }if(amountOfTurningOn == 2){
             System.out.println("Компьютер Взорвался");
         }
     }

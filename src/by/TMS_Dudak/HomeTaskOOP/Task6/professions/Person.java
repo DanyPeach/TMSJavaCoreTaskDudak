@@ -31,4 +31,8 @@ public class Person{
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public void noCarInfo(){
+        System.out.println("У этого человека нет машины" + getAge() + " " + getGender());
+    }
 }

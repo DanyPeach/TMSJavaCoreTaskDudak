@@ -2,6 +2,7 @@ package by.TMS_Dudak.HomeTaskOOP.Task6.vehicles;
 
 import by.TMS_Dudak.HomeTaskOOP.Task6.details.Engine;
 import by.TMS_Dudak.HomeTaskOOP.Task6.professions.Driver;
+import by.TMS_Dudak.HomeTaskOOP.Task6.professions.Person;
 
 public class Lorry extends Car{
     private String loadCapacity;

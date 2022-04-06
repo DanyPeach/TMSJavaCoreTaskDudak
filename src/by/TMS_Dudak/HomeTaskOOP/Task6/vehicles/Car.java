@@ -10,7 +10,7 @@ public class Car {
     private int weight;
     private Driver driver;
     private Engine engine;
-    private Person person;
+
 
     public Car(){
 
@@ -42,7 +42,7 @@ public class Car {
 
     public void printInfo(){
         System.out.println("Марка машины: " + mark + "\nВладелец машины: "
-        + driver.getFullName() + "\nВозраст владельца машины: " + driver.getAge() +
+                + driver.getFullName() + "\nВозраст владельца машины: " + driver.getAge() +
                 "\nГендерная индификация водителя: "+ driver.getGender() + "\nКласс машины: " + clas + "\nВес машины: " +
                 weight + "\nМотор машины: " + engine.getPower() + " " + engine.getPerformance());
     }

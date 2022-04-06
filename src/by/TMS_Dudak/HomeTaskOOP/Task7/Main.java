@@ -14,7 +14,7 @@ public class Main {
             Animals[] animalsArr = {cat, dog, horse};
 
             for (int i = 0; i< animalsArr.length; i++){
-                vetirinar.treatAnimal(animalsArr[i]);
+               vetirinar.treatAnimal(animalsArr[i]);
             }
     }
 }

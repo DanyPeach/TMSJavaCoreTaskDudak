@@ -34,21 +34,21 @@ public class Reader {
         System.out.println(fullName + " взял " + bookCount + " книг(и)");
     }
 
-    public void takeBook(Books[] book, int quantity){
+    public Books[] takeBook(Books[] book, int quantity){
         System.out.println("\n"+fullName + " взял следующие книги: ");
         int j;
-        Books[] bookArrPris = new Books[quantity];
+        Books[] getBookTaken = new Books[quantity];
         for(int i = 0; i<quantity ;i++){
             Random random = new Random();
             j = random.nextInt(1, book.length);
-            bookArrPris[i] = book[j];
+            getBookTaken[i] = book[j];
             System.out.println(book[j].getBookName() + " " + book[j].getBookAuther());
         }
-
+        return getBookTaken;
 
     }
 
-    public void takeBook(int quantityType, Books[] type){
+    public String[] takeBook(int quantityType, Books[] type){
         System.out.println("\n"+fullName +" взял книги: ");
         int j;
         String[] bookTypePris = new String[quantityType];
@@ -58,6 +58,7 @@ public class Reader {
             bookTypePris[i] = String.valueOf(type[j]);
             System.out.println(type[j].getBookType() + " ");
         }
+        return bookTypePris;
     }
 
 
@@ -72,10 +73,7 @@ public class Reader {
         int j;
         Books[] bookArrPris = new Books[quantity];
         for(int i = 0; i<quantity ;i++){
-            Random random = new Random();
-            j = random.nextInt(1, book.length);
-            bookArrPris[i] = book[j];
-            System.out.println(book[j].getBookName() + " " + book[j].getBookAuther());
+            System.out.println(book[i].getBookName() + " " + book[i].getBookAuther());
         }
     }
 

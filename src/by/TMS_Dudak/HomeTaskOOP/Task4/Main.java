@@ -21,11 +21,16 @@ public class Main {
         Books[] booksNameArr = {book1, book2, book3, book4, book5, book6};
         Books[] bookTypeArr = {type1, type2, type3, type4};
 
-
         reader1.takeBook(booksNameArr, 3);
         reader1.takeBook(4, bookTypeArr);
 
         reader3.takeBook(booksNameArr, 2);
+        reader3.returnBook(booksNameArr, 2);
+
+        Books[] bookNameRetArr = reader1.takeBook(booksNameArr, 2);
+        for(Books i : bookNameRetArr ){
+            System.out.println(i.getBookName() + " " + i.getBookName());
+        }
 
 
 

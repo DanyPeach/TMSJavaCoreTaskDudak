@@ -10,6 +10,7 @@ public class Main {
             cat.makeNoise("Котик прыгает");
             dog.eat();
             horse.sleep();
+        System.out.println(cat.type);
 
             Animals[] animalsArr = {cat, dog, horse};
 

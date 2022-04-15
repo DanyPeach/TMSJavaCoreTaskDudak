@@ -2,26 +2,22 @@ package by.TMS_Dudak.Lesson8.Lecture;
 
 import by.TMS_Dudak.HomeTaskOOP.Task2.Person;
 
-public class Application extends Entity{
-    private int height;
-    private int age;
-    private String name;
-    private String lastName;
+public class Application{
 
-    public Application(){
-
-    }
-
-    public Application(int age, int height, String name){
-        this.age = age;
-        this.height = height;
-        this.name = name;
-
-    }
-
-    public Application(int id, String name){
-        super(id);
-        this.name = name;
-    }
+    //статический блок, последовательность инициализации
+    //переружать статические методы нельзя, они не переобпределяются
+    //только вложенные классы могут быть статическими.
+    //статиечскими могут быть поля, методы, классы.
+    //статические методы принадлежат классу а не к экзмепляру
+    //перегрузка - это тот же метод только с другим количеством параметров или их типов
+    //аргументы переменной длинны. (int... a) например это массив интовых значений
+    //foreach (int i : a), где i это просто переменная индексов, а - элемнт массива. Таким образом проходимся по всем
+    //элементам массива
+    //автобоксинг: если хотябы один из параметров другого типа пытается сделать преобразование
+    //
+    //слово finale
+    //может быть переменная, метод, класс
+    //если переменная finale
+    //т
 
 }

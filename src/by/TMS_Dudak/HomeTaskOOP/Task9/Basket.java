@@ -13,7 +13,21 @@ public class Basket extends  Product {
         this.products = products;
     }
 
+    public void showBasket(){
+        System.out.println("Ваша корзина: "  );
+        for(Product i : products){
+            System.out.println(i.getName() + " " +i.getPrice());
+        }
+    }
 
+    public void showPrice(){
+        System.out.println("Вы пошопились как крутышки на сумму: ");
+        double sum = 0;
+        for(Product i : products){
+            sum+=i.getPrice();
+        }
+        System.out.println(sum);
+    }
 
     public Product[] getProducts() {
         return products;

@@ -28,14 +28,12 @@ public class Main {
 
         Category[] categoryArr = {categoryOneUse, categoryVape, categoryJuice};
 
+        System.out.println("Сколько товаров вы планируете купить! Ваше решение нельзя поменять!");
+        int n = scanner.nextInt();
+        Product[] basketCat1 = new Product[n];
 
-
-        Product[] basketCat1 = new Product[2];
-        Product[] basketCat2 = new Product[2];
-        Product[] basketCat3 = new Product[2];
-        Basket basket = new Basket(basketCat1);
-
-        do {
+        int dulapip = 0;
+        for(int k=0; k<n; k++) {
             System.out.println("Доступные каталоги: ");
             for(int i = 0, j = 1; i<categoryArr.length; i++, j++){
                 System.out.println(j + ") "+ categoryArr[i].getName());
@@ -47,9 +45,10 @@ public class Main {
                     categoryOneUse.categoryPrint();
                     System.out.println("Выберете товар: ");
                     int a = scanner.nextInt();
-                    for (int j = 0, i = 0; j < oneUseSig.length; j++) {
+                    for (int j = 0; j < oneUseSig.length; j++) {
                         if (a == j + 1) {
-                            basketCat1[i] = oneUseSig[j];
+                            basketCat1[dulapip] = oneUseSig[j];
+                            dulapip++;
                         }
                     }
                 }
@@ -57,9 +56,10 @@ public class Main {
                     categoryVape.categoryPrint();
                     System.out.println("Выберете товар: ");
                     int a = scanner.nextInt();
-                    for (int j = 0, i = 0; j < oneUseSig.length; j++) {
+                    for (int j = 0; j < oneUseSig.length; j++) {
                         if (a == j + 1) {
-                            basketCat2[i] = vape[j];
+                            basketCat1[dulapip] = vape[j];
+                            dulapip++;
                         }
                     }
                 }
@@ -67,24 +67,19 @@ public class Main {
                     categoryJuice.categoryPrint();
                     System.out.println("Выберете товар: ");
                     int a = scanner.nextInt();
-                    for (int j = 0, i = 0; j < oneUseSig.length; j++) {
+                    for (int j = 0; j < oneUseSig.length; j++) {
                         if (a == j + 1) {
-                            basketCat3[i] = juice[j];
+                            basketCat1[dulapip] = juice[j];
+                            dulapip++;
                         }
                     }
                 }
             }
-            System.out.println("Хотите прекратить шоппинг? (0 нет, 1 да)");
-            int end = scanner.nextInt();
-            if(end == 1){
-                break;
-            }
-        }while (true);
-
-        System.out.println("Ваша корзина: "  );
-        for(Product i : basketCat1){
-            System.out.println(i.getName() + " " +i.getPrice());
         }
+
+        Basket basket = new Basket(basketCat1);
+        basket.showBasket();
+        basket.showPrice();
 
     }
 }

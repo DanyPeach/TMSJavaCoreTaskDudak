@@ -9,14 +9,15 @@ public class Task3 {
         StringBuffer sb = new StringBuffer();
         Pattern p = Pattern.compile("Object-oriented programming");//Задаем паттерн (шаблон и поиск подстроки в строке)
         Matcher m = p.matcher(sentence);//возращает тру есом в строке есть подстрока которая совпадает с шаблоном и переходит к этоц строке
-        int count = 0;//задаем счетчик
-        while(m.find()) {//в цикле пишем метод описанный выше в комменте
-            if(count++ % 2 != 0) {
-                m.appendReplacement(sb, "OOP");
-            }
-        }
-        m.appendTail(sb);//добавляет хвост после замены
-        System.out.println(sb);
+//        int count = 0;//задаем счетчик
+//        while(m.find()) {//в цикле пишем метод описанный выше в комменте
+//            if(count++ % 2 != 0) {
+//                m.appendReplacement(sb, "OOP");
+//            }
+//        }
+        System.out.println(m);
+//        m.appendTail(sb);//добавляет хвост после замены
+//        System.out.println(sb);
 
     }
 }

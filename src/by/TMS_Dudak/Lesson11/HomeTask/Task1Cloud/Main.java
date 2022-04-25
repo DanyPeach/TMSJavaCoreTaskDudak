@@ -5,5 +5,6 @@ public class Main {
         Info info = new Info();
         info.registration("Daniil_Dudak", "Viserozno124", "Viserozno124");
         System.out.println(info.registration("lollllllll", "23dkf", "23dkf"));
+        System.out.println(info.registration("Daniil 345*", "1467", "1467"));
     }
 }

@@ -9,6 +9,9 @@ public class Car {
 
 
     public Car() {
+        this.mark="None";
+        this.speed=120;
+        this.price=10000;
     }
 
     public Car(String mark, int speed, int price) {
@@ -22,12 +25,12 @@ public class Car {
         try {
             int randomNumber = random.nextInt(0, 21);
             if(randomNumber%2==0){
-                throw new MyExeption("Машина не завелась");
+                throw new MyExeption("Машина не завелась", randomNumber);
             }else{
                 System.out.println("Машина завелась и готова двигаться!");
             }
         }catch (MyExeption e){
-            System.out.println(e.getMessage());
+            System.out.println(e.toString());
         }
     }
 

@@ -2,7 +2,7 @@ package by.TMS_Dudak.HomeTaskOOP.Task9;
 
 import java.util.ArrayList;
 
-public class Basket extends  Product {
+public class Basket {
     private Product[] products;
 
     public Basket() {

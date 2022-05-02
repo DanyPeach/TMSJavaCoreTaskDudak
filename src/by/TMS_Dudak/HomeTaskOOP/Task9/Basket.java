@@ -30,7 +30,7 @@ public class Basket {
     }
 
     public Product[] getProducts() {
-        return products;
+        return products.clone();
     }
 
     public void setProducts(Product[] products) {

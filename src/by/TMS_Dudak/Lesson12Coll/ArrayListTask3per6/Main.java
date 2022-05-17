@@ -1,11 +1,13 @@
-package by.TMS_Dudak.Lesson12Coll.ArrayListTask4;
+package by.TMS_Dudak.Lesson12Coll.ArrayListTask3per6;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         List<String> cities = new ArrayList<>();
+        List<String> towns = new ArrayList<>();
 
         cities.add("Minks");
         cities.add("Grodno");
@@ -14,6 +16,8 @@ public class Main {
         cities.add("Vitebsk");
         cities.add("Brest");
 
-        Methods.findCity(2, cities);
+        System.out.println(ChangeItem.sortByName(cities));
+        ChangeItem.copyToNewArr(cities, towns);
+        System.out.println(towns);
     }
 }

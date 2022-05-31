@@ -28,6 +28,7 @@ public class Lecture {
 
         //reduce - какая-то сумма хз
 
-
+        //предикат....
+        //
     }
 }

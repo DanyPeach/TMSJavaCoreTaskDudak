@@ -11,7 +11,7 @@ public class Main {
 
     private static void print(String fullname, int mark, String subject) {
         Formatter formater = new Formatter();
-        formater.format("Студент    %s: получил %s по предмету %s",  fullname, mark, subject);
+        formater.format("Студент    %s: получил %d по предмету %s",  fullname, mark, subject);
         System.out.println(formater);
     }
 }
